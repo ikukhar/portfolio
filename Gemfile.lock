@@ -204,6 +204,9 @@ GEM
     sexp_processor (4.6.0)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     spork (1.0.0rc4)
     spork-rails (4.0.0)
       rails (>= 3.0.0, < 5)
@@ -261,6 +264,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   selenium-webdriver
   shoulda-matchers
+  simple_form
   spork (~> 1.0rc)
   spork-rails
   spring
