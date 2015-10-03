@@ -6,10 +6,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-  .container
-    .col-sm-8.col-sm-offset-2
-      =render partial: 'layouts/header'
-      %p.notice= notice
-      %p.alert= alert
-      = yield
-      =render partial: 'layouts/footer'
+    .container
+      .col-sm-8.col-sm-offset-2
+        =render partial: 'layouts/header'
+        =flash_messages
+        = yield
+        =render partial: 'layouts/footer'
