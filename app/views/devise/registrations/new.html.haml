@@ -8,8 +8,12 @@
     = f.input :name, required: true
     = f.input :surname, required: true
     = f.input :phone, required: true
-    = f.input :date_of_birth, required: true
-    -#  <%= f.date_select :date_of_birth, start_year: 1920, end_year: 2000, class: 'form-control'  %>
+    = f.label :date_of_birth
+    %br
+    = f.date_select :date_of_birth, start_year: 1950, end_year: 2000, class: 'form-control', required: true
+    %p
+    = recaptcha_tags
+    %p
   .form-actions
     = f.button :submit, "Sign up"
 %p
