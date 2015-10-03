@@ -8,7 +8,16 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :password) }
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit( :email,
+                                                               :password,
+                                                               :password_confirmation,
+                                                               :current_password,
+                                                               :avatar,
+                                                               :name,
+                                                               :surname,
+                                                               :phone,
+                                                               :date_of_birth,
+                                                               :"g-recaptcha-response") }
       devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:email,
                                                                      :password,
                                                                      :password_confirmation,

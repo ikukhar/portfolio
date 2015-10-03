@@ -30,5 +30,5 @@ class RegistrationsController < Devise::RegistrationsController
       resource.update_attributes(params)
     end
   end
-  
+
 end
