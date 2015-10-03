@@ -5,8 +5,7 @@
         .navbar-header
           = link_to 'Portfolio', root_path, class: 'navbar-brand'
         %ul.nav.navbar-nav.pull-left
-          %li= link_to 'Contacts', "#"
-          %li= link_to 'Send message', "#"
+          %li= link_to 'Contacts', "/contacts"
         %ul.nav.navbar-nav.pull-right
           - if user_signed_in?
             %li.dropdown

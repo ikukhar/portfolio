@@ -1,0 +1,37 @@
+%h2 Contacts
+%hr
+
+%div
+  %ul#contact-info
+    %li
+      %i.glyphicon.glyphicon-phone
+      %span.field Phone:
+      %br
+      .contact-info-data (066) 910-48-74
+    %li
+      %i.glyphicon.glyphicon-envelope
+      %span.field Email:
+      %br
+      %a{:href => "mailto:ivkukhar@gmail.com", :title => "Email"}
+        .contact-info-data ivkukhar@gmail.com
+    %li
+      %i.glyphicon.glyphicon-home
+      %span.field Address:
+      %br
+      .contact-info-data
+        Zaporozhye
+        %br
+        Ukraine
+
+%br
+- if user_signed_in?
+  %form{:method => "post"}
+    .input-block-level
+      %textarea#message{:name => "message", :placeholder => "Message", :rows => "6", style: 'width: 100%'}
+    .actions
+      %input#submitButton.btn.btn-info.pull.-right{:name => "submit", :title => "Click here to submit your message!", :type => "submit", :value => "Send Your Message"}
+-else
+  = link_to "Log in", new_user_session_path
+  or
+  = link_to "Sign up", new_user_registration_path
+  to send message

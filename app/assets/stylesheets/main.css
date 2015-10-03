@@ -31,3 +31,11 @@ body {
   border-color: #3889bd;
   margin: 5px;
 }
+
+ul#contact-info {
+  list-style: none;
+}
+
+.contact-info-data {
+  padding-left: 19px;
+}
