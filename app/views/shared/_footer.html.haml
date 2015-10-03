@@ -1,9 +1,0 @@
-%nav.navbar.navbar-inverse.navbar-fixed-bottom
-  .container
-    .col-sm-8.col-sm-offset-2
-      #navbar
-        %ul.nav.navbar-nav.pull-left
-          %li= link_to 'Home', root_path
-          %li= link_to 'Contacts', "#"
-          - if user_signed_in?
-            %li= link_to 'Profile', edit_user_registration_path

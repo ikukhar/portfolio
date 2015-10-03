@@ -8,8 +8,8 @@
   %body
   .container
     .col-sm-8.col-sm-offset-2
-      =render partial: 'shared/header'
+      =render partial: 'layouts/header'
       %p.notice= notice
       %p.alert= alert
       = yield
-      =render partial: 'shared/footer'
+      =render partial: 'layouts/footer'
