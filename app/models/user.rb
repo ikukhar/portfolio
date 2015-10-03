@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   validates_presence_of :name, :surname, :phone, :date_of_birth
+  validates_format_of :phone, with: /\([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}/
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
