@@ -28,6 +28,7 @@ gem 'paperclip', '~> 4.3'
 gem 'simple_form'
 gem 'rmagick'
 gem "recaptcha", :require => "recaptcha/rails"
+gem 'jquery-turbolinks'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -42,7 +43,7 @@ group :development, :test do
   # gem 'shoulda-matchers', require: false
   # gem 'capybara'
   # gem 'selenium-webdriver'
-  
+
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
