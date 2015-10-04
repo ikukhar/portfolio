@@ -15,6 +15,10 @@
 //= require jquery.turbolinks
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require underscore-min
+//= require json2
+//= require judge
+//= require judge-bootstrap-helper
 //= require_tree .
 
 $(document).ready(function(){

@@ -27,7 +27,7 @@
 - if user_signed_in?
   %form{:method => "post"}
     .input-block-level
-      %textarea#message{:name => "message", :placeholder => "Message", :rows => "6", style: 'width: 100%'}
+      %textarea#message{:name => "message", :placeholder => "Message", :rows => "6", style: 'width: 100%', :validate => true}
     .actions
       %input#submitButton.btn.btn-info.pull.-right{:name => "submit", :title => "Click here to submit your message!", :type => "submit", :value => "Send Your Message"}
 -else

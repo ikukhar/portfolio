@@ -4,21 +4,21 @@
   = f.error_notification
   .form-group
     .form-inputs
-      = f.input :avatar, as: :file
+      = f.input :avatar, as: :file, :validate => true
       -if current_user.avatar
         = image_tag(current_user.avatar.url(:medium))
   %p
   .form-inputs
-    = f.input :email, required: true, autofocus: true
+    = f.input :email, autofocus: true, :validate => true
     - if devise_mapping.confirmable? && resource.pending_reconfirmation?
       %p
         Currently waiting confirmation for: #{resource.unconfirmed_email}
-    = f.input :name, required: true
-    = f.input :surname, required: true
-    = f.input :phone, required: true
+    = f.input :name, :validate => true
+    = f.input :surname, :validate => true
+    = f.input :phone, :validate => true
     = f.label :date_of_birth
     %br
-    = f.date_select :date_of_birth, start_year: 1950, end_year: 2000, class: 'form-control', required: true
+    = f.date_select :date_of_birth, start_year: 1950, end_year: 2000, class: 'form-control', :validate => true
     %p
   .form-actions
     = f.button :submit, "Update profile", class: 'btn btn-success'

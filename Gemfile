@@ -29,6 +29,8 @@ gem 'simple_form'
 gem 'rmagick'
 gem "recaptcha", :require => "recaptcha/rails"
 gem 'jquery-turbolinks'
+gem 'judge'
+gem 'judge-simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
