@@ -23,8 +23,8 @@ class RegistrationsController < Devise::RegistrationsController
   protected
 
   def update_resource(resource, params)
+    params.delete(:current_password)
     unless [params[:password]]
-      params.delete(:current_password)
       resource.update_without_password(params)
     else
       resource.update_attributes(params)
